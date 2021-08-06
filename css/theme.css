@@ -1,0 +1,106 @@
+/* setup custom properties */
+:root{
+	
+	
+	--clr-primary-100: #fff;
+	--clr-primary-200: #F3EED9;
+	--clr-primary-500: #824936;
+	--clr-netrual-900: #222C2A;
+
+
+	--ff-primary: "Roboto", sans-serif;
+	--ff-accent: "Playfair Display", sans-serif;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+	font-family: var(--ff-primary);
+	font-weight: 400;
+	font-size: 1.3125rem;
+	line-height: 1.6;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h2,h3,p{
+	margin-bottom: 1rem;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
+
+
+h1,h2,h3{
+	color: var(--clr-primary-500);
+	line-height: 1;
+	font-family: var(--ff-accent);
+	font-weight: 900;
+}
+
+.text-center{
+	text-align: center;
+}
+
+header,
+section {
+	padding: 3rem 0;
+}
+
+.container{
+	margin-inline: auto;  /* margin left and right */
+	width: min(90%, 70.5rem);
+}
+
+.container--narrow{
+	max-width: 34rem;
+}
+
+.split{
+	display: flex;
+	flex-direction: column; /* reset thing to normal, flex-box*/
+}
+
+/* query media */
+@media(min-width: 40em){
+	.split{
+		flex-direction: row;
+	}
+	.split > * {
+		flex-basis: 100%;
+	}
+}
+
+.bg-light{
+	background-color: var(--clr-primary-200);
+}
+
+.bg-primary{
+	color: var(--clr-primary-100);
+	background-color:var(--clr-primary-500);
+}
+
+.bg-dark{
+	color: var(--clr-primary-100);
+	background-color: var(--clr-netrual-900);
+}
+
+.bg-dark h2,
+.bg-primary h2 {
+	color: var(--clr-primary-200);
+}
+
+
