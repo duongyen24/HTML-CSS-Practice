@@ -59,6 +59,13 @@ header,
 section {
 	padding: 3rem 0;
 }
+/* making page have bigger screen */
+@media (min-width:40em){ 
+	header,
+	section {
+		padding: 7rem 0;
+}
+}
 
 .container{
 	margin-inline: auto;  /* margin left and right */
@@ -74,13 +81,16 @@ section {
 	flex-direction: column; /* reset thing to normal, flex-box*/
 }
 
-/* query media */
+/* query media split EQUAL column*/
 @media(min-width: 40em){
 	.split{
 		flex-direction: row;
 	}
 	.split > * {
 		flex-basis: 100%;
+	}
+	.split > * + *{ /* anything before div will have 2em gap*/
+		margin-left: 2em;
 	}
 }
 
